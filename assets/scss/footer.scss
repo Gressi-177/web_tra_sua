@@ -1,0 +1,109 @@
+$mobile-width: 576px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile-S {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-L {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+footer {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(85, 75, 185, 0.95);
+  }
+  position: relative;
+  background-image: url(../images/footer-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  padding: 48px 0;
+  .container {
+    position: relative;
+    z-index: 1;
+    .row {
+      @include mobile-S {
+        text-align: center;
+        margin: 0 40px;
+      }
+      img {
+        width: 100%;
+        @include mobile-S {
+          width: 200px;
+        }
+      }
+      .title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        @include mobile-S {
+          margin-top: 40px;
+        }
+      }
+
+      .date {
+        color: #efa506;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+      }
+
+      .adress,
+      .des {
+        color: inherit;
+        font-size: 1.5rem;
+        opacity: 0.8;
+      }
+      .social {
+        display: flex;
+        margin-top: 20px;
+        @include mobile-S {
+          justify-content: center;
+        }
+        a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background-color: #fff;
+          font-size: 2rem;
+          margin-right: 12px;
+        }
+      }
+      padding-bottom: 24px;
+      border-bottom: 2px solid #fff;
+    }
+    .coppy-right {
+      margin: 20px 0;
+      text-align: center;
+      font-size: 1.6rem;
+      color: #efa506;
+    }
+  }
+}

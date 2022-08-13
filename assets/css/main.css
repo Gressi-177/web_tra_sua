@@ -1,0 +1,250 @@
+main {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+main #banner {
+  width: 100%;
+  height: 75vh;
+  background-image: url(../images/banner.gif);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+@media (max-width: 575px) {
+  main #banner {
+    height: 50vh;
+  }
+}
+main #banner .time p {
+  color: #fff;
+  text-align: center;
+}
+main #banner .time p:nth-child(1) {
+  font-style: italic;
+  font-family: "Playfair Display";
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 100px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  main #banner .time p:nth-child(1) {
+    font-size: 8rem;
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  main #banner .time p:nth-child(1) {
+    font-size: 6rem;
+    line-height: 35px;
+  }
+}
+@media (max-width: 575px) {
+  main #banner .time p:nth-child(1) {
+    font-size: 3rem;
+    line-height: 20px;
+  }
+}
+main #banner .time p:nth-child(2) {
+  font-size: 2rem;
+}
+@media (max-width: 575px) {
+  main #banner .time p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+}
+main #introduction .row {
+  padding: 6rem 20px;
+}
+main #introduction .title {
+  text-transform: uppercase;
+  color: #1b273d;
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: Bevan, Poppins, sans-serif;
+}
+main #introduction span {
+  color: #ec398b;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+main #introduction .description {
+  margin-top: 16px;
+  font-weight: 600;
+  color: rgba(50, 51, 51, 0.8);
+  font-size: 1.8rem;
+}
+main #introduction .show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+main #introduction .show .day {
+  color: #554bb9;
+  border: 8px solid #ddd;
+  font-size: 4rem;
+  font-weight: 700;
+  width: 110px;
+  height: 110px;
+  line-height: 90px;
+  border-radius: 10px;
+}
+main #introduction .show .place {
+  margin-left: 20px;
+  text-align: left;
+}
+main #introduction .show .place span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #000;
+  text-transform: uppercase;
+}
+main #introduction .show .place p {
+  font-size: 1.6rem;
+  color: rgba(50, 51, 51, 0.8);
+}
+main #introduction .btn-buy {
+  margin: 0 auto;
+  max-width: 150px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  display: inline-block;
+  background-color: #e0e721;
+  color: #4a25aa;
+  padding: 10px 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 48px;
+  cursor: pointer;
+}
+main #introduction .btn-buy:hover {
+  border-radius: 20px;
+}
+main #slider {
+  background-image: url(../images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 50px;
+}
+main #slider .title {
+  font-size: 4rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+}
+@media (max-width: 767px) {
+  main #slider .title {
+    font-size: 2rem;
+  }
+}
+main #slider #slider_singel .carousel-indicators {
+  bottom: -40px;
+}
+main #slider #slider_singel .carousel-indicators button {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+main #slider #slider_singel .carousel-control-prev {
+  left: -70px;
+}
+@media (max-width: 767px) {
+  main #slider #slider_singel .carousel-control-prev {
+    left: -40px;
+  }
+}
+main #slider #slider_singel .carousel-control-next {
+  right: -70px;
+}
+@media (max-width: 767px) {
+  main #slider #slider_singel .carousel-control-next {
+    right: -40px;
+  }
+}
+main #slider .img_slider {
+  display: flex;
+  flex-direction: row;
+}
+main #slider .img_slider img {
+  width: 33.3333333333%;
+}
+main #product_list {
+  padding: 40px 0;
+  background-color: #554bb9;
+}
+main #product_list .row {
+  text-align: center;
+}
+main #product_list .row .item {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 40px 10px;
+}
+main #product_list .row .item .inner {
+  position: relative;
+}
+main #product_list .row .item .inner img {
+  width: 100px;
+}
+main #product_list .row .item .inner .name {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
+main #product_list .row .item .inner .price {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #efa506;
+  margin: 20px;
+}
+main #product_list .row .item .inner button {
+  min-width: 100px;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #ec398b;
+  padding: 8px 18px;
+  transition: 0.25s;
+}
+main #product_list .row .item .inner button:hover {
+  border-radius: 18px;
+  background-color: #e0e721;
+}
+main #product_list .row .item::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/dots2.png);
+  width: 100%;
+  height: 100%;
+  transform: translate(-90%, 60%) rotate(45deg);
+}
+main #product_list .row .item:hover {
+  background-color: #fff;
+}
+main #product_list .row .item:hover .inner {
+  animation: hoverProduct 0.5s linear;
+}
+main #product_list .row .item:hover .inner .name {
+  color: #554bb9;
+}
+
+@keyframes hoverProduct {
+  0% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
